@@ -68,24 +68,44 @@
                     <a class="article__back-link" href="index-2.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
                     <p class="article__title">Haberman's Cancer Survival - Exploratory Data Analysis (EDA) using Python</p>
                     <p class="article_date">July, 21, 2018</p>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-                        perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                        aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                        voluptatem.</p>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui:
+                    <p> Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. In this analysis you asked a series of questions and answer them through statistics and visualisation method to find realtionship among features and dicover the hidden charactertics of the data. In this blog, Haberman cancer survival dataset case study is choosen to explote the data through exploratory data analysis.
                     </p>
+
+                    <h4><strong>1. Dataset Summary</strong></h4>
+                    <p>
+                        The dataset contains cases from a study that was conducted between 1958 and 1970 at the University of Chicago's Billings Hospital on the survival of patients who had undergone surgery for breast cancer.
+                    </p>
+                    <h6> Dataset Attribute Information</h6>
+                    <ol type="1">
+                    	<li>1. Age of patient at time of operation (numerical)</li>
+                    	<li>2. Patient's year of operation (year - 1900, numerical)</li>
+                    	<li>3. Age of patient at time of operation (numerical)</li>
+                    	<li>4. Survival status (class attribute) 1 = the patient survived 5 years or longer 2 = the patient died within 5 year</li>
+						<li>5. Number of instances 306 </li>
+						<li>6. Number of attributes 4 (including class attributes)</li>
+                    </ol>
+                    <br/>
+                    <p> The key point of EDA is to define your objective first, this helps your thougts while analysing your data. Here your objective is to predict whether a patients will survived or not after the 5yr of operation based on their age, operation year and number of positive lymph. 
+                    </p>
+                    <h4><strong>2. Environment Setup</strong></h4>
+                    <p> Importing necessary libraries and load the dataset using pandas read_csv function</p>
+<div class="code">
+<pre>
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+patients_data = pd.read_csv('haberman.csv')
+</pre>
+</div>
+<p>Let's ask some question and understand the characterstics of the data </p>
+<div class="cell">
+	<div class="inputs"># (Q) How many data-points and features<br/>print(patients.shape)</div>
+	<div class="output">(305, 4)</div>
+</div>
+
+
                     <figure>
                         <img src="assets/img/img_article_photo.jpg">
                         <figcaption>This is how I organize my HTML, CSS and PHP files</figcaption>
@@ -166,64 +186,63 @@
     <!--Other Posts-->
 
     <!--Contact-->
-    <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">
-        <div id="contact" class="container section">
-            <div class="row">
-                <div class="col-md-12">
-                    <p id="contacts_header" class="section__title">Get in touch_</p>
-                </div>
-            </div>
-            <div class="row contacts">
-                <div class="col-md-5 col-lg-4">
-                    <div class="contacts__list">
-                        <dl class="contact-list">
-                            <dt>Phone:</dt>
-                            <dd><a href="tel:82344563333">8 (234) 456-33-33</a></dd>
-                            <dt>Skype:</dt>
-                            <dd><a href="skype:iamivanovivan">iamivanovivan</a></dd>
-                            <dt>Email:</dt>
-                            <dd><a href="mailto:mail@mail.com">mail@mail.com</a></dd>
-                        </dl>
-                    </div>
-                    <div class="contacts__social">
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Linkedin</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Bitbucket</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-5">
-                    <div class="contacts__form">
-                        <p class="contacts__form-title">Or just write me a letter here_</p>
-                        <form class="js-form">
-                            <div class="form-group">
-                                <input class="form-field js-field-name" type="text" placeholder="Your name" required>
-                                <span class="form-validation"></span>
-                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-field js-field-email" type="email"  placeholder="Your e-mail" required>
-                                <span class="form-validation"></span>
-                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-field js-field-message" placeholder="Type the message here"
-                                          required></textarea>
-                                <span class="form-validation"></span>
-                                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
-                            </div>
-                            <button class="site-btn site-btn--form" type="submit" value="Send">Send</button>
-                        </form>
-                    </div>
-                    <div class="footer">
-                        <p>© 2016 Ivan Susanin. All Rights Reserved</p>
-                    </div>
-                </div>
-            </div>
+   <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">
+    <div id="contact" class="container section">
+      <div class="row">
+        <div class="col-md-12">
+          <p id="contacts_header" class="section__title">Get in touch_</p>
         </div>
+      </div>
+      <div class="row contacts">
+        <div class="col-md-5 col-lg-4">
+          <div class="contacts__list">
+            <dl class="contact-list">
+              <dt>Phone:</dt>
+              <dd><a href="tel:82344563333">+91-790-399-5655</a></dd>
+              <dt>Skype:</dt>
+              <dd><a href="skype:iamivanovivan">amit.kumar9119</a></dd>
+              <dt>Email:</dt>
+              <dd><a href="mailto:mail@mail.com">ellipticamit@mail.com</a></dd>
+            </dl>
+          </div>
+          <div class="contacts__social">
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Linkedin</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Bitbucket</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-5">
+          <div class="contacts__form">
+            <p class="contacts__form-title">Or just write me a letter here_</p>
+            <form class="js-form">
+              <div class="form-group">
+                <input class="form-field js-field-name" type="text" placeholder="Your name" required>
+                <span class="form-validation"></span>
+                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+              </div>
+              <div class="form-group">
+                <input class="form-field js-field-email" type="email"  placeholder="Your e-mail" required>
+                <span class="form-validation"></span>
+                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+              </div>
+              <div class="form-group">
+                <textarea class="form-field js-field-message" placeholder="Type the message here" required></textarea>
+                <span class="form-validation"></span>
+                <span class="form-invalid-icon"><i class="mdi mdi-close" aria-hidden="true"></i></span>
+              </div>
+              <button class="site-btn site-btn--form" type="submit" value="Send">Send</button>
+            </form>
+          </div>
+          <div class="footer">
+            <p>© 2018 Amit Kumar. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
     <!--Contact-->
 
     <script src="js/jquery-2.2.4.min.js"></script>
