@@ -1,0 +1,49 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  height: 4rem;
+  z-index: 1030;
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--hidden {
+    transform: translate3d(0, -4rem, 0);
+  }
+}
+
+.header.activated {
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: inset 0 35px 13px rgba(14, 12, 22, 0.85);
+}
+
+.main-nav {
+  @include spaceBetween;
+}
+
+.nav {
+  @include flexCenter;
+
+  &-item {
+    padding: 0px 10px;
+  }
+
+  &-link.active {
+    color: white;
+  }
+
+  &-link {
+    color: $offwhite;
+    span {
+      color: $grey;
+    }
+
+    &:hover {
+      color: $offwhite1;
+    }
+  }
+}
