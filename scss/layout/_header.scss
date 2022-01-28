@@ -25,6 +25,10 @@
   @include spaceBetween;
 }
 
+.logo {
+  color: $primary;
+}
+
 .nav {
   @include flexCenter;
 

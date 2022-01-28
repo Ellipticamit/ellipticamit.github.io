@@ -424,6 +424,9 @@ footer {
   align-items: center;
   justify-content: space-between; }
 
+.logo {
+  color: #2eff2e; }
+
 .nav {
   display: flex;
   align-items: center;
