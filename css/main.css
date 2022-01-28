@@ -145,6 +145,8 @@ h6 {
   height: 255px;
   background: grey;
   will-change: transform; }
+  .project__card a {
+    color: white; }
   .project__card-text {
     position: absolute;
     bottom: 30px;
@@ -163,6 +165,10 @@ h6 {
       font-size: 1.2rem;
       line-height: 1.5rem;
       color: #494949; }
+    .project__card-text .online_link {
+      color: #5918df;
+      font-size: 0.8rem;
+      line-height: 1.5rem; }
   .project__card-image {
     position: relative;
     width: 100%;

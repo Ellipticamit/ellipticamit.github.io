@@ -8,6 +8,10 @@
     background: grey;
     will-change: transform;
 
+    a {
+      color: white;
+    }
+
     &-text {
       position: absolute;
       bottom: 30px;
@@ -31,6 +35,12 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
         color: $grey;
+      }
+
+      .online_link {
+        color: $indigo;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
       }
     }
 
