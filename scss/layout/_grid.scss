@@ -2,4 +2,8 @@
   @include spaceBetween;
   width: 100%;
   padding: 0px 15px;
+
+  .col {
+    width: 40%;
+  }
 }

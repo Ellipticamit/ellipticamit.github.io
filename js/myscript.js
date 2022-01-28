@@ -107,3 +107,10 @@ $('.designtext').ShuffleText(['Website', 'Mobile App'], {
   loop: true,
   delay: 2000,
 });
+
+$('.project__card').plate({
+  inverse: false,
+  perspective: 500,
+  maxRotation: 15,
+  animationDuration: 150,
+});
