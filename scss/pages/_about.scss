@@ -10,25 +10,10 @@
     line-height: 1.6;
   }
 
-  .code_l {
-    position: relative;
-    z-index: 1;
-    &::after {
-      content: attr(data-line-nr);
-      position: absolute;
-      left: -60px;
-      color: #3b3553;
-      font-family: Roboto Mono, Courier New, Courier, monospace !important;
-      font-size: 16px;
-      line-height: 1.6;
-      z-index: 3;
-      top: 0;
-    }
-  }
-
   .code_line {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     position: relative;
     z-index: 1;
 
@@ -51,6 +36,14 @@
     -webkit-animation: blink 0.8s infinite;
     animation: blink 0.8s infinite;
   }
+
+  @include respond('phone') {
+    .code_line {
+      &::after {
+        left: -53px;
+      }
+    }
+  }
 }
 
 .comment {
@@ -59,7 +52,6 @@
 }
 
 .func {
-  display: inline;
   color: $yellow;
 }
 
@@ -69,7 +61,6 @@
 }
 
 .dot {
-  display: inline;
   color: #3b3553;
 }
 
@@ -79,7 +70,6 @@
 
 .prop {
   color: $blue;
-  display: inline;
 }
 .yellow {
   color: $yellow;

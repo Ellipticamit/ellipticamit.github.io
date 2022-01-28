@@ -20,6 +20,7 @@ $(document).ready(function () {
   var prevDirection = 0;
 
   var checkScroll = function () {
+    $('.nav').removeClass('showmenu');
     curScroll = w.scrollY || doc.scrollTop;
     if (curScroll > prevScroll) direction = 2;
     else if (curScroll < prevScroll) direction = 1;
@@ -113,4 +114,15 @@ $('.project__card').plate({
   perspective: 500,
   maxRotation: 15,
   animationDuration: 150,
+});
+
+var togglemenu = false;
+
+$('.menu_btn_container').click(function (event) {
+  if (!togglemenu) {
+    $('.nav').addClass('showmenu');
+  } else {
+    $('.nav').removeClass('showmenu');
+  }
+  togglemenu = !togglemenu;
 });
