@@ -126,6 +126,13 @@
     padding: 0px 15px;
   }
 
+  @include respond('phone') {
+    &_container {
+      width: 85%;
+      padding-right: 0px;
+    }
+  }
+
   &_content {
     margin-top: 20px;
     padding-bottom: 45px;

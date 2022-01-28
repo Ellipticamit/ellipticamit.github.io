@@ -103,7 +103,7 @@ function unhoverFunc(e) {
 $(window).on('mousemove', moveCircle);
 $('a').hover(hoverFunc, unhoverFunc);
 
-$('.designtext').ShuffleText(['Website', 'Mobile App'], {
+$('.designtext').ShuffleText(['Web App', 'Mobile App'], {
   loop: true,
   delay: 2000,
 });

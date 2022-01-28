@@ -39,4 +39,20 @@
   .project__2 {
     margin-top: 175px;
   }
+
+  @include respond('phone') {
+    .row {
+      flex-direction: column;
+    }
+
+    &::before {
+      font-size: 125px;
+      right: 10px;
+      top: -20px;
+    }
+
+    .project__2 {
+      margin-top: 50px;
+    }
+  }
 }

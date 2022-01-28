@@ -6,4 +6,10 @@
   .col {
     width: 40%;
   }
+
+  @include respond('sm-phone') {
+    .col {
+      width: 100%;
+    }
+  }
 }

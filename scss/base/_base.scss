@@ -92,6 +92,16 @@ p {
   font-size: 3rem;
 }
 
+@include respond('phone') {
+  .start_section {
+    padding-top: 50px;
+    margin-top: 20vh;
+  }
+  .subtitles {
+    font-size: 1.7rem;
+  }
+}
+
 .explore {
   font-size: 1.5rem;
   color: $grey;
