@@ -34,7 +34,7 @@ a:link {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.primarycolor {
+.primary {
   color: $primary;
 }
 
@@ -92,6 +92,43 @@ p {
   font-size: 3rem;
 }
 
+.yellow {
+  color: $yellow;
+}
+
+.indigo {
+  color: $indigo;
+}
+
+.white {
+  color: #fff;
+}
+
+.otherfont {
+  font-family: Roboto Mono, Courier New, Courier, monospace !important;
+}
+
+.offwhite {
+  color: $offwhite1;
+}
+
+.explore {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.pinklight {
+  color: $pinklight;
+}
+
+.aboutme {
+  color: $yellow;
+  &:hover {
+    color: $primary;
+  }
+}
+
 @include respond('phone') {
   .start_section {
     padding-top: 50px;
@@ -100,12 +137,6 @@ p {
   .subtitles {
     font-size: 1.7rem;
   }
-}
-
-.explore {
-  font-size: 1.5rem;
-  color: $grey;
-  font-weight: 300;
 }
 
 .h1,

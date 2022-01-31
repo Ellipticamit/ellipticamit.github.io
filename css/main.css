@@ -38,7 +38,7 @@ a {
 a:link {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
-.primarycolor {
+.primary {
   color: #2eff2e; }
 
 ::selection {
@@ -86,17 +86,40 @@ p {
 .subtitles {
   font-size: 3rem; }
 
+.yellow {
+  color: #eeff31; }
+
+.indigo {
+  color: #5918df; }
+
+.white {
+  color: #fff; }
+
+.otherfont {
+  font-family: Roboto Mono, Courier New, Courier, monospace !important; }
+
+.offwhite {
+  color: rgba(255, 255, 255, 0.75); }
+
+.explore {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300; }
+
+.pinklight {
+  color: #ff48a5; }
+
+.aboutme {
+  color: #eeff31; }
+  .aboutme:hover {
+    color: #2eff2e; }
+
 @media only screen and (max-width: 575px) {
   .start_section {
     padding-top: 50px;
     margin-top: 20vh; }
   .subtitles {
     font-size: 1.7rem; } }
-
-.explore {
-  font-size: 1.5rem;
-  color: #494949;
-  font-weight: 300; }
 
 .h1,
 .h2,
@@ -125,7 +148,7 @@ h6 {
   line-height: 1;
   color: #fff;
   border-radius: 50px;
-  background: linear-gradient(-45deg, #e39d24, #ff0081, #0040ff, #5918df);
+  background: linear-gradient(-45deg, #fc5404, #ffc4e1, #88fff7, #5918df);
   background-size: 1100%;
   border: none;
   position: relative;
@@ -173,7 +196,7 @@ h6 {
       line-height: 1.5rem;
       color: #494949; }
     .project__card-text .online_link {
-      color: #5918df;
+      color: #11ffee;
       font-size: 0.8rem;
       line-height: 1.5rem; }
   .project__card-image {
@@ -275,10 +298,10 @@ h6 {
   color: #3b3553; }
 
 .this {
-  color: #f00404f1; }
+  color: #ff1700; }
 
 .prop {
-  color: #0040ff; }
+  color: #11ffee; }
 
 .yellow {
   color: #eeff31; }
@@ -294,7 +317,7 @@ h6 {
   color: #8aff8a; }
 
 .orange {
-  color: #e39d24; }
+  color: #fc5404; }
 
 .pr10 {
   padding-right: 5px; }
@@ -348,7 +371,7 @@ h6 {
     background-color: #1b191e; }
 
 #work {
-  background-color: #1a1527;
+  background-image: linear-gradient(-180deg, #1a1527, #0e0c16 88%, #0e0c16 99%);
   background-position: top;
   background-repeat: repeat-x;
   position: relative;
@@ -415,7 +438,7 @@ footer {
         width: 100%;
         gap: 0%; } }
     .footer_wrap .social_wrap .social_link {
-      color: #5918df;
+      color: #11ffee;
       font-size: 1.1rem; }
 
 .row {

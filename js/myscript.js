@@ -9,6 +9,8 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: thisHrefOffset }, 'slow');
     event.preventDefault();
   });
+
+  $('#aboutme').click(function (event) {});
 });
 
 (function () {
@@ -42,7 +44,6 @@ $(document).ready(function () {
       var thisChild = $(this).children('a');
       var thisChildHref = $(this).children('a').attr('href');
       if (thisChildHref === '#' + activeID) {
-        console.log('found');
         $('.nav-link').removeClass('active');
         $(thisChild).addClass('active');
       }
@@ -57,7 +58,6 @@ $(document).ready(function () {
     } else if (direction === 1) {
       prevDirection = direction;
       $('#header').removeClass('header--hidden').addClass('header--fixed');
-      //$('#header').removeClass('header--hidden').addClass('header--fixed');
     }
   };
 
