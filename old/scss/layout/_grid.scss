@@ -1,0 +1,15 @@
+.row {
+  @include spaceBetween;
+  width: 100%;
+  padding: 0px 15px;
+
+  .col {
+    width: 40%;
+  }
+
+  @include respond('sm-phone') {
+    .col {
+      width: 100%;
+    }
+  }
+}

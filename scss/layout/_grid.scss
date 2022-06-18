@@ -1,15 +1,51 @@
-.row {
-  @include spaceBetween;
-  width: 100%;
-  padding: 0px 15px;
+.c-grid {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
 
-  .col {
-    width: 40%;
-  }
-
-  @include respond('sm-phone') {
-    .col {
-      width: 100%;
+  &__item-3, &__item-6, &__item-5, &__item-7 {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 1.75rem;
+    p.link-text {
+      color: $heading;
+    }
+    a:hover {
+      p.link-text {
+        color: $primary;
+      }
     }
   }
+
+  @include respond('phone') {
+    &__item-3 {
+      width: 48%;
+    }
+    &__item-6{
+      width: 48%;
+      &:nth-child(odd) {
+        padding-right: 15px;
+      }
+    }
+    &__item-5 {
+      width:40%;
+    }
+    &__item-7 {
+      width: 56%;
+    }
+    &__item-4{
+      width: 30%;
+    }
+  }
+
+  @include respond('tablet') {
+    gap: 4%;
+    &__item-3 {
+      width: 22%;
+      text-align: left;
+      padding-bottom: 2.7125rem;
+    }
+   
+  }
 }
+

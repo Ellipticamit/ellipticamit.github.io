@@ -1,0 +1,41 @@
+footer {
+  background-color: #0e0d10;
+  box-shadow: 0 0 76px 0 rgba(10, 7, 22, 0);
+  overflow: hidden;
+
+  .small_footer {
+    position: absolute;
+    bottom: 20px;
+    color: #988e9f;
+    font-size: 14px;
+  }
+}
+
+.footer_wrap {
+  margin: 50px 0px 90px;
+  font-family: Roboto Mono, Courier New, Courier, monospace !important;
+  .social_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-item {
+      width: 32%;
+      gap: 2%;
+    }
+
+    @include respond('phone') {
+      &-item {
+        width: 100%;
+        gap: 0%;
+      }
+    }
+
+    .social_link {
+      color: $sky;
+      font-size: 1.1rem;
+    }
+  }
+}
